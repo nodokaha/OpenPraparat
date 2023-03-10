@@ -2,7 +2,10 @@
 # Cross Platform Makefile
 #
 
-CXX = g++ #This would be replaced in macOS. 
+CXX = g++
+#CXX = g++-12
+#CXX = clang++
+
 FC = gfortran
 
 EXE_BLD = praparat_builder
@@ -24,7 +27,7 @@ SRC_GUI   += $(IMGUI_DIR)/imgui.cpp $(IMGUI_DIR)/imgui_demo.cpp $(IMGUI_DIR)/img
 SRC_GUI   += $(IMGUI_DIR)/backends/imgui_impl_glfw.cpp $(IMGUI_DIR)/backends/imgui_impl_opengl2.cpp
 SRC_GUI   += lib/ImGuiFileDialog/ImGuiFileDialog.cpp
 OBJS_GUI   = $(addsuffix .o, $(basename $(notdir $(SRC_GUI))))
-FFLAGS_GUI = -Wall -fbounds-check -O0 -Wuninitialized -fbacktrace -g 
+FFLAGS_GUI = -Wall -fbounds-check -O0 -Wuninitialized -fbacktrace -g
 
 SRC_DEB    = math.f90 praparat.f90 main.f90
 OBJS_DEB   = math_deb.o praparat_deb.o main_deb.o
@@ -42,7 +45,7 @@ CXXFLAGS = -std=c++17 -I$(IMGUI_DIR) -I$(IMGUI_DIR)/backends
 CXXFLAGS += -g -Wall -Wformat
 CXXFLAGS += -Wall -fbounds-check -O0 -Wuninitialized -g
 #CXXFLAGS += -static
-CXXFLAGS += -lgfortran -lpthread -lquadmath
+CXXFLAGS += -lgfortran -lpthread
 LIBS =
 
 
@@ -60,38 +63,27 @@ endif
 
 ifeq ($(UNAME_S), Darwin) #APPLE
 	ECHO_MESSAGE = "Mac OS X"
-
-	BREW_GCC_PATH := $(shell brew --prefix gcc)
-	BREW_GCC := $(shell ls -1 $(BREW_GCC_PATH)/bin/ | grep ^g++ | sed 's/*//')
-	CXX = $(BREW_GCC)
-
 	LIBS += -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
 	LIBS += -L/usr/local/lib -L/opt/homebrew/lib
 	LIBS += -lglfw
 
 	CXXFLAGS += -I/usr/local/include -I/opt/local/include -I/opt/homebrew/include
 	CFLAGS = $(CXXFLAGS)
-	FFLAGS_GUI += -fmax-stack-var-size=100000
-	FFLAGS_DEB += -fmax-stack-var-size=100000
-	FFLAGS_CUI += -fmax-stack-var-size=100000
 endif
 
 ifeq ($(OS), Windows_NT)
 	ECHO_MESSAGE = "MinGW"
-	LIBS += -lglu32 -lglfw3 -lgdi32 -lopengl32 -limm32
+	LIBS += -lglfw3 -lgdi32 -lopengl32 -limm32
 
 	CXXFLAGS += `pkg-config --cflags glfw3`
 	CFLAGS = $(CXXFLAGS)
-	FFLAGS_GUI += -fmax-stack-var-size=100000
-	FFLAGS_DEB += -fmax-stack-var-size=100000
-	FFLAGS_CUI += -fmax-stack-var-size=100000
 endif
 
 ##---------------------------------------------------------------------
 ## BUILD RULES
 ##---------------------------------------------------------------------
 
-all: $(EXE_GUI) $(EXE_BLD) $(EXE_DEB) $(EXE_CUI)
+all: $(EXE_GUI) $(EXE_BLD) $(EXE_DEB) $(EXE_CUI) 
 	@echo Build complete for $(ECHO_MESSAGE)
 
 install:
