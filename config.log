@@ -34,29 +34,31 @@ PATH: /home/nodokaha/.nix-profile/bin/
 PATH: /etc/profiles/per-user/nodokaha/bin/
 PATH: /nix/var/nix/profiles/default/bin/
 PATH: /run/current-system/sw/bin/
-PATH: /home/nodokaha/.cargo/bin/
 
 
 ## ----------- ##
 ## Core tests. ##
 ## ----------- ##
 
-configure:2834: looking for aux files: config.guess config.sub
-configure:2847:  trying ./
-configure:2876:   ./config.guess found
-configure:2876:   ./config.sub found
-configure:3061: checking for g++
-configure:3082: found /run/current-system/sw/bin/g++
-configure:3093: result: g++
-configure:3120: checking for C++ compiler version
-configure:3129: g++ --version >&5
+configure:2897: looking for aux files: config.guess config.sub missing install-sh compile
+configure:2910:  trying ./
+configure:2939:   ./config.guess found
+configure:2939:   ./config.sub found
+configure:2939:   ./missing found
+configure:2921:   ./install-sh found
+configure:2939:   ./compile found
+configure:3124: checking for g++
+configure:3145: found /run/current-system/sw/bin/g++
+configure:3156: result: g++
+configure:3183: checking for C++ compiler version
+configure:3192: g++ --version >&5
 g++ (GCC) 11.3.0
 Copyright (C) 2021 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-configure:3140: $? = 0
-configure:3129: g++ -v >&5
+configure:3203: $? = 0
+configure:3192: g++ -v >&5
 Using built-in specs.
 COLLECT_GCC=/nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/bin/g++
 COLLECT_LTO_WRAPPER=/nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/libexec/gcc/x86_64-unknown-linux-gnu/11.3.0/lto-wrapper
@@ -65,47 +67,47 @@ Configured with:
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 11.3.0 (GCC) 
-configure:3140: $? = 0
-configure:3129: g++ -V >&5
+configure:3203: $? = 0
+configure:3192: g++ -V >&5
 g++: error: unrecognized command-line option '-V'
 g++: fatal error: no input files
 compilation terminated.
-configure:3140: $? = 1
-configure:3129: g++ -qversion >&5
+configure:3203: $? = 1
+configure:3192: g++ -qversion >&5
 g++: error: unrecognized command-line option '-qversion'; did you mean '--version'?
 g++: fatal error: no input files
 compilation terminated.
-configure:3140: $? = 1
-configure:3160: checking whether the C++ compiler works
-configure:3182: g++    conftest.cpp  >&5
-configure:3186: $? = 0
-configure:3236: result: yes
-configure:3239: checking for C++ compiler default output file name
-configure:3241: result: a.out
-configure:3247: checking for suffix of executables
-configure:3254: g++ -o conftest    conftest.cpp  >&5
-configure:3258: $? = 0
-configure:3281: result: 
-configure:3303: checking whether we are cross compiling
-configure:3311: g++ -o conftest    conftest.cpp  >&5
-configure:3315: $? = 0
-configure:3322: ./conftest
-configure:3326: $? = 0
-configure:3341: result: no
-configure:3346: checking for suffix of object files
-configure:3369: g++ -c   conftest.cpp >&5
-configure:3373: $? = 0
-configure:3395: result: o
-configure:3399: checking whether the compiler supports GNU C++
-configure:3419: g++ -c   conftest.cpp >&5
-configure:3419: $? = 0
-configure:3429: result: yes
-configure:3440: checking whether g++ accepts -g
-configure:3461: g++ -c -g  conftest.cpp >&5
-configure:3461: $? = 0
-configure:3505: result: yes
-configure:3525: checking for g++ option to enable C++11 features
-configure:3540: g++  -c -g -O2  conftest.cpp >&5
+configure:3203: $? = 1
+configure:3223: checking whether the C++ compiler works
+configure:3245: g++    conftest.cpp  >&5
+configure:3249: $? = 0
+configure:3299: result: yes
+configure:3302: checking for C++ compiler default output file name
+configure:3304: result: a.out
+configure:3310: checking for suffix of executables
+configure:3317: g++ -o conftest    conftest.cpp  >&5
+configure:3321: $? = 0
+configure:3344: result: 
+configure:3366: checking whether we are cross compiling
+configure:3374: g++ -o conftest    conftest.cpp  >&5
+configure:3378: $? = 0
+configure:3385: ./conftest
+configure:3389: $? = 0
+configure:3404: result: no
+configure:3409: checking for suffix of object files
+configure:3432: g++ -c   conftest.cpp >&5
+configure:3436: $? = 0
+configure:3458: result: o
+configure:3462: checking whether the compiler supports GNU C++
+configure:3482: g++ -c   conftest.cpp >&5
+configure:3482: $? = 0
+configure:3492: result: yes
+configure:3503: checking whether g++ accepts -g
+configure:3524: g++ -c -g  conftest.cpp >&5
+configure:3524: $? = 0
+configure:3568: result: yes
+configure:3588: checking for g++ option to enable C++11 features
+configure:3603: g++  -c -g -O2  conftest.cpp >&5
 conftest.cpp: In function 'int main(int, char**)':
 conftest.cpp:175:25: warning: empty parentheses were disambiguated as a function declaration [-Wvexing-parse]
   175 |   cxx11test::delegate d2();
@@ -115,20 +117,20 @@ conftest.cpp:175:25: note: remove parentheses to default-initialize a variable
       |                         ^~
       |                         --
 conftest.cpp:175:25: note: or replace parentheses with braces to value-initialize a variable
-configure:3540: $? = 0
-configure:3558: result: none needed
-configure:3684: checking for gcc
-configure:3705: found /run/current-system/sw/bin/gcc
-configure:3716: result: gcc
-configure:4069: checking for C compiler version
-configure:4078: gcc --version >&5
+configure:3603: $? = 0
+configure:3621: result: none needed
+configure:3747: checking for gcc
+configure:3768: found /run/current-system/sw/bin/gcc
+configure:3779: result: gcc
+configure:4132: checking for C compiler version
+configure:4141: gcc --version >&5
 gcc (GCC) 11.3.0
 Copyright (C) 2021 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-configure:4089: $? = 0
-configure:4078: gcc -v >&5
+configure:4152: $? = 0
+configure:4141: gcc -v >&5
 Using built-in specs.
 COLLECT_GCC=/nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/bin/gcc
 COLLECT_LTO_WRAPPER=/nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/libexec/gcc/x86_64-unknown-linux-gnu/11.3.0/lto-wrapper
@@ -137,39 +139,67 @@ Configured with:
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 11.3.0 (GCC) 
-configure:4089: $? = 0
-configure:4078: gcc -V >&5
+configure:4152: $? = 0
+configure:4141: gcc -V >&5
 gcc: error: unrecognized command-line option '-V'
 gcc: fatal error: no input files
 compilation terminated.
-configure:4089: $? = 1
-configure:4078: gcc -qversion >&5
+configure:4152: $? = 1
+configure:4141: gcc -qversion >&5
 gcc: error: unrecognized command-line option '-qversion'; did you mean '--version'?
 gcc: fatal error: no input files
 compilation terminated.
-configure:4089: $? = 1
-configure:4078: gcc -version >&5
+configure:4152: $? = 1
+configure:4141: gcc -version >&5
 gcc: error: unrecognized command-line option '-version'
 gcc: fatal error: no input files
 compilation terminated.
-configure:4089: $? = 1
-configure:4093: checking whether the compiler supports GNU C
-configure:4113: gcc -c   conftest.c >&5
-configure:4113: $? = 0
-configure:4123: result: yes
-configure:4134: checking whether gcc accepts -g
-configure:4155: gcc -c -g  conftest.c >&5
-configure:4155: $? = 0
-configure:4199: result: yes
-configure:4219: checking for gcc option to enable C11 features
-configure:4234: gcc  -c -g -O2  conftest.c >&5
-configure:4234: $? = 0
-configure:4252: result: none needed
-configure:4366: checking for main in -lGL
-configure:4386: gcc -o conftest -g -O2   conftest.c -lGL   >&5
+configure:4152: $? = 1
+configure:4156: checking whether the compiler supports GNU C
+configure:4176: gcc -c   conftest.c >&5
+configure:4176: $? = 0
+configure:4186: result: yes
+configure:4197: checking whether gcc accepts -g
+configure:4218: gcc -c -g  conftest.c >&5
+configure:4218: $? = 0
+configure:4262: result: yes
+configure:4282: checking for gcc option to enable C11 features
+configure:4297: gcc  -c -g -O2  conftest.c >&5
+configure:4297: $? = 0
+configure:4315: result: none needed
+configure:4436: checking whether gcc understands -c and -o together
+configure:4459: gcc -c conftest.c -o conftest2.o
+configure:4462: $? = 0
+configure:4459: gcc -c conftest.c -o conftest2.o
+configure:4462: $? = 0
+configure:4474: result: yes
+configure:4509: checking for a BSD-compatible install
+configure:4582: result: /run/current-system/sw/bin/install -c
+configure:4593: checking whether build environment is sane
+configure:4648: result: yes
+configure:4803: checking for a race-free mkdir -p
+configure:4847: result: /run/current-system/sw/bin/mkdir -p
+configure:4854: checking for gawk
+configure:4875: found /run/current-system/sw/bin/gawk
+configure:4886: result: gawk
+configure:4897: checking whether make sets $(MAKE)
+configure:4920: result: yes
+configure:4942: checking whether make supports the include directive
+configure:4957: make -f confmf.GNU && cat confinc.out
+this is the am__doit target
+configure:4960: $? = 0
+configure:4979: result: yes (GNU style)
+configure:5014: checking whether make supports nested variables
+configure:5032: result: yes
+configure:5113: checking dependency style of gcc
+configure:5225: result: gcc3
+configure:5242: checking dependency style of g++
+configure:5354: result: gcc3
+configure:5429: checking for main in -lGL
+configure:5449: gcc -o conftest -g -O2   conftest.c -lGL   >&5
 /nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: cannot find -lGL: No such file or directory
 collect2: error: ld returned 1 exit status
-configure:4386: $? = 1
+configure:5449: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -178,6 +208,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | /* end confdefs.h.  */
 | 
 | 
@@ -188,12 +220,12 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:4396: result: no
-configure:4407: checking for main in -lGLU
-configure:4427: gcc -o conftest -g -O2   conftest.c -lGLU   >&5
+configure:5459: result: no
+configure:5470: checking for main in -lGLU
+configure:5490: gcc -o conftest -g -O2   conftest.c -lGLU   >&5
 /nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: cannot find -lGLU: No such file or directory
 collect2: error: ld returned 1 exit status
-configure:4427: $? = 1
+configure:5490: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -202,6 +234,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | /* end confdefs.h.  */
 | 
 | 
@@ -212,12 +246,12 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:4437: result: no
-configure:4448: checking for main in -lgdi32
-configure:4468: gcc -o conftest -g -O2   conftest.c -lgdi32   >&5
+configure:5500: result: no
+configure:5511: checking for main in -lgdi32
+configure:5531: gcc -o conftest -g -O2   conftest.c -lgdi32   >&5
 /nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: cannot find -lgdi32: No such file or directory
 collect2: error: ld returned 1 exit status
-configure:4468: $? = 1
+configure:5531: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -226,6 +260,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | /* end confdefs.h.  */
 | 
 | 
@@ -236,12 +272,12 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:4478: result: no
-configure:4489: checking for main in -lgfortran
-configure:4509: gcc -o conftest -g -O2   conftest.c -lgfortran   >&5
+configure:5541: result: no
+configure:5552: checking for main in -lgfortran
+configure:5572: gcc -o conftest -g -O2   conftest.c -lgfortran   >&5
 /nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: cannot find -lgfortran: No such file or directory
 collect2: error: ld returned 1 exit status
-configure:4509: $? = 1
+configure:5572: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -250,6 +286,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | /* end confdefs.h.  */
 | 
 | 
@@ -260,12 +298,12 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:4519: result: no
-configure:4530: checking for main in -lglfw
-configure:4550: gcc -o conftest -g -O2   conftest.c -lglfw   >&5
+configure:5582: result: no
+configure:5593: checking for main in -lglfw
+configure:5613: gcc -o conftest -g -O2   conftest.c -lglfw   >&5
 /nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: cannot find -lglfw: No such file or directory
 collect2: error: ld returned 1 exit status
-configure:4550: $? = 1
+configure:5613: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -274,6 +312,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | /* end confdefs.h.  */
 | 
 | 
@@ -284,12 +324,12 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:4560: result: no
-configure:4571: checking for main in -lglfw3
-configure:4591: gcc -o conftest -g -O2   conftest.c -lglfw3   >&5
+configure:5623: result: no
+configure:5634: checking for main in -lglfw3
+configure:5654: gcc -o conftest -g -O2   conftest.c -lglfw3   >&5
 /nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: cannot find -lglfw3: No such file or directory
 collect2: error: ld returned 1 exit status
-configure:4591: $? = 1
+configure:5654: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -298,6 +338,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | /* end confdefs.h.  */
 | 
 | 
@@ -308,12 +350,12 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:4601: result: no
-configure:4612: checking for main in -limm32
-configure:4632: gcc -o conftest -g -O2   conftest.c -limm32   >&5
+configure:5664: result: no
+configure:5675: checking for main in -limm32
+configure:5695: gcc -o conftest -g -O2   conftest.c -limm32   >&5
 /nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: cannot find -limm32: No such file or directory
 collect2: error: ld returned 1 exit status
-configure:4632: $? = 1
+configure:5695: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -322,6 +364,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | /* end confdefs.h.  */
 | 
 | 
@@ -332,12 +376,12 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:4642: result: no
-configure:4653: checking for main in -lopengl32
-configure:4673: gcc -o conftest -g -O2   conftest.c -lopengl32   >&5
+configure:5705: result: no
+configure:5716: checking for main in -lopengl32
+configure:5736: gcc -o conftest -g -O2   conftest.c -lopengl32   >&5
 /nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: cannot find -lopengl32: No such file or directory
 collect2: error: ld returned 1 exit status
-configure:4673: $? = 1
+configure:5736: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -346,6 +390,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | /* end confdefs.h.  */
 | 
 | 
@@ -356,58 +402,58 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:4683: result: no
-configure:4694: checking for main in -lpthread
-configure:4714: gcc -o conftest -g -O2   conftest.c -lpthread   >&5
-configure:4714: $? = 0
-configure:4724: result: yes
-configure:4740: checking for stdio.h
-configure:4740: gcc -c -g -O2  conftest.c >&5
-configure:4740: $? = 0
-configure:4740: result: yes
-configure:4740: checking for stdlib.h
-configure:4740: gcc -c -g -O2  conftest.c >&5
-configure:4740: $? = 0
-configure:4740: result: yes
-configure:4740: checking for string.h
-configure:4740: gcc -c -g -O2  conftest.c >&5
-configure:4740: $? = 0
-configure:4740: result: yes
-configure:4740: checking for inttypes.h
-configure:4740: gcc -c -g -O2  conftest.c >&5
-configure:4740: $? = 0
-configure:4740: result: yes
-configure:4740: checking for stdint.h
-configure:4740: gcc -c -g -O2  conftest.c >&5
-configure:4740: $? = 0
-configure:4740: result: yes
-configure:4740: checking for strings.h
-configure:4740: gcc -c -g -O2  conftest.c >&5
-configure:4740: $? = 0
-configure:4740: result: yes
-configure:4740: checking for sys/stat.h
-configure:4740: gcc -c -g -O2  conftest.c >&5
-configure:4740: $? = 0
-configure:4740: result: yes
-configure:4740: checking for sys/types.h
-configure:4740: gcc -c -g -O2  conftest.c >&5
-configure:4740: $? = 0
-configure:4740: result: yes
-configure:4740: checking for unistd.h
-configure:4740: gcc -c -g -O2  conftest.c >&5
-configure:4740: $? = 0
-configure:4740: result: yes
-configure:4765: checking for stdint.h
-configure:4765: result: yes
-configure:4774: checking for _Bool
-configure:4774: gcc -c -g -O2  conftest.c >&5
-configure:4774: $? = 0
-configure:4774: gcc -c -g -O2  conftest.c >&5
+configure:5746: result: no
+configure:5757: checking for main in -lpthread
+configure:5777: gcc -o conftest -g -O2   conftest.c -lpthread   >&5
+configure:5777: $? = 0
+configure:5787: result: yes
+configure:5803: checking for stdio.h
+configure:5803: gcc -c -g -O2  conftest.c >&5
+configure:5803: $? = 0
+configure:5803: result: yes
+configure:5803: checking for stdlib.h
+configure:5803: gcc -c -g -O2  conftest.c >&5
+configure:5803: $? = 0
+configure:5803: result: yes
+configure:5803: checking for string.h
+configure:5803: gcc -c -g -O2  conftest.c >&5
+configure:5803: $? = 0
+configure:5803: result: yes
+configure:5803: checking for inttypes.h
+configure:5803: gcc -c -g -O2  conftest.c >&5
+configure:5803: $? = 0
+configure:5803: result: yes
+configure:5803: checking for stdint.h
+configure:5803: gcc -c -g -O2  conftest.c >&5
+configure:5803: $? = 0
+configure:5803: result: yes
+configure:5803: checking for strings.h
+configure:5803: gcc -c -g -O2  conftest.c >&5
+configure:5803: $? = 0
+configure:5803: result: yes
+configure:5803: checking for sys/stat.h
+configure:5803: gcc -c -g -O2  conftest.c >&5
+configure:5803: $? = 0
+configure:5803: result: yes
+configure:5803: checking for sys/types.h
+configure:5803: gcc -c -g -O2  conftest.c >&5
+configure:5803: $? = 0
+configure:5803: result: yes
+configure:5803: checking for unistd.h
+configure:5803: gcc -c -g -O2  conftest.c >&5
+configure:5803: $? = 0
+configure:5803: result: yes
+configure:5828: checking for stdint.h
+configure:5828: result: yes
+configure:5837: checking for _Bool
+configure:5837: gcc -c -g -O2  conftest.c >&5
+configure:5837: $? = 0
+configure:5837: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:52:20: error: expected expression before ')' token
-   52 | if (sizeof ((_Bool)))
+conftest.c:54:20: error: expected expression before ')' token
+   54 | if (sizeof ((_Bool)))
       |                    ^
-configure:4774: $? = 1
+configure:5837: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -416,6 +462,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | #define HAVE_LIBPTHREAD 1
 | #define HAVE_STDIO_H 1
 | #define HAVE_STDLIB_H 1
@@ -465,20 +513,20 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:4774: result: yes
-configure:4783: checking for stdbool.h that conforms to C99
-configure:4899: gcc -c -g -O2  conftest.c >&5
-configure:4899: $? = 0
-configure:4907: result: yes
-configure:4915: checking how to run the C preprocessor
-configure:4941: gcc -E  conftest.c
-configure:4941: $? = 0
-configure:4956: gcc -E  conftest.c
-conftest.c:22:10: fatal error: ac_nonexistent.h: No such file or directory
-   22 | #include <ac_nonexistent.h>
+configure:5837: result: yes
+configure:5846: checking for stdbool.h that conforms to C99
+configure:5962: gcc -c -g -O2  conftest.c >&5
+configure:5962: $? = 0
+configure:5970: result: yes
+configure:5978: checking how to run the C preprocessor
+configure:6004: gcc -E  conftest.c
+configure:6004: $? = 0
+configure:6019: gcc -E  conftest.c
+conftest.c:24:10: fatal error: ac_nonexistent.h: No such file or directory
+   24 | #include <ac_nonexistent.h>
       |          ^~~~~~~~~~~~~~~~~~
 compilation terminated.
-configure:4956: $? = 1
+configure:6019: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -487,6 +535,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | #define HAVE_LIBPTHREAD 1
 | #define HAVE_STDIO_H 1
 | #define HAVE_STDLIB_H 1
@@ -502,15 +552,15 @@ configure: failed program was:
 | #define HAVE__BOOL 1
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:4983: result: gcc -E
-configure:4997: gcc -E  conftest.c
-configure:4997: $? = 0
-configure:5012: gcc -E  conftest.c
-conftest.c:22:10: fatal error: ac_nonexistent.h: No such file or directory
-   22 | #include <ac_nonexistent.h>
+configure:6046: result: gcc -E
+configure:6060: gcc -E  conftest.c
+configure:6060: $? = 0
+configure:6075: gcc -E  conftest.c
+conftest.c:24:10: fatal error: ac_nonexistent.h: No such file or directory
+   24 | #include <ac_nonexistent.h>
       |          ^~~~~~~~~~~~~~~~~~
 compilation terminated.
-configure:5012: $? = 1
+configure:6075: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -519,6 +569,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | #define HAVE_LIBPTHREAD 1
 | #define HAVE_STDIO_H 1
 | #define HAVE_STDLIB_H 1
@@ -534,28 +586,28 @@ configure: failed program was:
 | #define HAVE__BOOL 1
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:5043: checking for grep that handles long lines and -e
-configure:5107: result: /run/current-system/sw/bin/grep
-configure:5112: checking for egrep
-configure:5180: result: /run/current-system/sw/bin/grep -E
-configure:5185: checking for uid_t in sys/types.h
-configure:5206: result: yes
-configure:5217: checking for inline
-configure:5234: gcc -c -g -O2  conftest.c >&5
-configure:5234: $? = 0
-configure:5243: result: inline
-configure:5261: checking for int32_t
-configure:5261: gcc -c -g -O2  conftest.c >&5
-configure:5261: $? = 0
-configure:5261: gcc -c -g -O2  conftest.c >&5
+configure:6106: checking for grep that handles long lines and -e
+configure:6170: result: /run/current-system/sw/bin/grep
+configure:6175: checking for egrep
+configure:6243: result: /run/current-system/sw/bin/grep -E
+configure:6248: checking for uid_t in sys/types.h
+configure:6269: result: yes
+configure:6280: checking for inline
+configure:6297: gcc -c -g -O2  conftest.c >&5
+configure:6297: $? = 0
+configure:6306: result: inline
+configure:6324: checking for int32_t
+configure:6324: gcc -c -g -O2  conftest.c >&5
+configure:6324: $? = 0
+configure:6324: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:55:67: warning: integer overflow in expression of type 'int' results in '-2147483648' [-Woverflow]
-   55 |                  < (int32_t) (((((int32_t) 1 << N) << N) - 1) * 2 + 2))];
+conftest.c:57:67: warning: integer overflow in expression of type 'int' results in '-2147483648' [-Woverflow]
+   57 |                  < (int32_t) (((((int32_t) 1 << N) << N) - 1) * 2 + 2))];
       |                                                                   ^
-conftest.c:54:12: error: storage size of 'test_array' isn't constant
-   54 | static int test_array [1 - 2 * !((int32_t) (((((int32_t) 1 << N) << N) - 1) * 2 + 1)
+conftest.c:56:12: error: storage size of 'test_array' isn't constant
+   56 | static int test_array [1 - 2 * !((int32_t) (((((int32_t) 1 << N) << N) - 1) * 2 + 1)
       |            ^~~~~~~~~~
-configure:5261: $? = 1
+configure:6324: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -564,6 +616,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | #define HAVE_LIBPTHREAD 1
 | #define HAVE_STDIO_H 1
 | #define HAVE_STDLIB_H 1
@@ -618,19 +672,19 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5261: result: yes
-configure:5270: checking for int64_t
-configure:5270: gcc -c -g -O2  conftest.c >&5
-configure:5270: $? = 0
-configure:5270: gcc -c -g -O2  conftest.c >&5
+configure:6324: result: yes
+configure:6333: checking for int64_t
+configure:6333: gcc -c -g -O2  conftest.c >&5
+configure:6333: $? = 0
+configure:6333: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:55:67: warning: integer overflow in expression of type 'long int' results in '-9223372036854775808' [-Woverflow]
-   55 |                  < (int64_t) (((((int64_t) 1 << N) << N) - 1) * 2 + 2))];
+conftest.c:57:67: warning: integer overflow in expression of type 'long int' results in '-9223372036854775808' [-Woverflow]
+   57 |                  < (int64_t) (((((int64_t) 1 << N) << N) - 1) * 2 + 2))];
       |                                                                   ^
-conftest.c:54:12: error: storage size of 'test_array' isn't constant
-   54 | static int test_array [1 - 2 * !((int64_t) (((((int64_t) 1 << N) << N) - 1) * 2 + 1)
+conftest.c:56:12: error: storage size of 'test_array' isn't constant
+   56 | static int test_array [1 - 2 * !((int64_t) (((((int64_t) 1 << N) << N) - 1) * 2 + 1)
       |            ^~~~~~~~~~
-configure:5270: $? = 1
+configure:6333: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -639,6 +693,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | #define HAVE_LIBPTHREAD 1
 | #define HAVE_STDIO_H 1
 | #define HAVE_STDLIB_H 1
@@ -693,16 +749,16 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5270: result: yes
-configure:5279: checking for mode_t
-configure:5279: gcc -c -g -O2  conftest.c >&5
-configure:5279: $? = 0
-configure:5279: gcc -c -g -O2  conftest.c >&5
+configure:6333: result: yes
+configure:6342: checking for mode_t
+configure:6342: gcc -c -g -O2  conftest.c >&5
+configure:6342: $? = 0
+configure:6342: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:53:21: error: expected expression before ')' token
-   53 | if (sizeof ((mode_t)))
+conftest.c:55:21: error: expected expression before ')' token
+   55 | if (sizeof ((mode_t)))
       |                     ^
-configure:5279: $? = 1
+configure:6342: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -711,6 +767,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | #define HAVE_LIBPTHREAD 1
 | #define HAVE_STDIO_H 1
 | #define HAVE_STDLIB_H 1
@@ -761,16 +819,16 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5279: result: yes
-configure:5289: checking for off_t
-configure:5289: gcc -c -g -O2  conftest.c >&5
-configure:5289: $? = 0
-configure:5289: gcc -c -g -O2  conftest.c >&5
+configure:6342: result: yes
+configure:6352: checking for off_t
+configure:6352: gcc -c -g -O2  conftest.c >&5
+configure:6352: $? = 0
+configure:6352: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:53:20: error: expected expression before ')' token
-   53 | if (sizeof ((off_t)))
+conftest.c:55:20: error: expected expression before ')' token
+   55 | if (sizeof ((off_t)))
       |                    ^
-configure:5289: $? = 1
+configure:6352: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -779,6 +837,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | #define HAVE_LIBPTHREAD 1
 | #define HAVE_STDIO_H 1
 | #define HAVE_STDLIB_H 1
@@ -829,16 +889,16 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5289: result: yes
-configure:5299: checking for size_t
-configure:5299: gcc -c -g -O2  conftest.c >&5
-configure:5299: $? = 0
-configure:5299: gcc -c -g -O2  conftest.c >&5
+configure:6352: result: yes
+configure:6362: checking for size_t
+configure:6362: gcc -c -g -O2  conftest.c >&5
+configure:6362: $? = 0
+configure:6362: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:53:21: error: expected expression before ')' token
-   53 | if (sizeof ((size_t)))
+conftest.c:55:21: error: expected expression before ')' token
+   55 | if (sizeof ((size_t)))
       |                     ^
-configure:5299: $? = 1
+configure:6362: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -847,6 +907,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | #define HAVE_LIBPTHREAD 1
 | #define HAVE_STDIO_H 1
 | #define HAVE_STDLIB_H 1
@@ -897,44 +959,44 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5299: result: yes
-configure:5309: checking for struct stat.st_blksize
-configure:5309: gcc -c -g -O2  conftest.c >&5
-configure:5309: $? = 0
-configure:5309: result: yes
-configure:5318: checking for struct stat.st_blocks
-configure:5318: gcc -c -g -O2  conftest.c >&5
-configure:5318: $? = 0
-configure:5318: result: yes
-configure:5337: checking for struct stat.st_rdev
-configure:5337: gcc -c -g -O2  conftest.c >&5
-configure:5337: $? = 0
-configure:5337: result: yes
-configure:5346: checking for uint16_t
-configure:5346: gcc -c -g -O2  conftest.c >&5
-configure:5346: $? = 0
-configure:5346: result: yes
-configure:5356: checking for uint32_t
-configure:5356: gcc -c -g -O2  conftest.c >&5
-configure:5356: $? = 0
-configure:5356: result: yes
-configure:5368: checking for uint64_t
-configure:5368: gcc -c -g -O2  conftest.c >&5
-configure:5368: $? = 0
-configure:5368: result: yes
-configure:5380: checking for uint8_t
-configure:5380: gcc -c -g -O2  conftest.c >&5
-configure:5380: $? = 0
-configure:5380: result: yes
-configure:5392: checking for ptrdiff_t
-configure:5392: gcc -c -g -O2  conftest.c >&5
-configure:5392: $? = 0
-configure:5392: gcc -c -g -O2  conftest.c >&5
+configure:6362: result: yes
+configure:6372: checking for struct stat.st_blksize
+configure:6372: gcc -c -g -O2  conftest.c >&5
+configure:6372: $? = 0
+configure:6372: result: yes
+configure:6381: checking for struct stat.st_blocks
+configure:6381: gcc -c -g -O2  conftest.c >&5
+configure:6381: $? = 0
+configure:6381: result: yes
+configure:6400: checking for struct stat.st_rdev
+configure:6400: gcc -c -g -O2  conftest.c >&5
+configure:6400: $? = 0
+configure:6400: result: yes
+configure:6409: checking for uint16_t
+configure:6409: gcc -c -g -O2  conftest.c >&5
+configure:6409: $? = 0
+configure:6409: result: yes
+configure:6419: checking for uint32_t
+configure:6419: gcc -c -g -O2  conftest.c >&5
+configure:6419: $? = 0
+configure:6419: result: yes
+configure:6431: checking for uint64_t
+configure:6431: gcc -c -g -O2  conftest.c >&5
+configure:6431: $? = 0
+configure:6431: result: yes
+configure:6443: checking for uint8_t
+configure:6443: gcc -c -g -O2  conftest.c >&5
+configure:6443: $? = 0
+configure:6443: result: yes
+configure:6455: checking for ptrdiff_t
+configure:6455: gcc -c -g -O2  conftest.c >&5
+configure:6455: $? = 0
+configure:6455: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:57:24: error: expected expression before ')' token
-   57 | if (sizeof ((ptrdiff_t)))
+conftest.c:59:24: error: expected expression before ')' token
+   59 | if (sizeof ((ptrdiff_t)))
       |                        ^
-configure:5392: $? = 1
+configure:6455: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -943,6 +1005,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | #define HAVE_LIBPTHREAD 1
 | #define HAVE_STDIO_H 1
 | #define HAVE_STDLIB_H 1
@@ -997,51 +1061,51 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5392: result: yes
-configure:5403: checking for error_at_line
-configure:5420: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-configure:5420: $? = 0
-configure:5429: result: yes
-configure:5440: checking for _LARGEFILE_SOURCE value needed for large files
-configure:5460: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-configure:5460: $? = 0
-configure:5490: result: no
-configure:5516: checking build system type
-configure:5531: result: x86_64-pc-linux-gnu
-configure:5551: checking host system type
-configure:5565: result: x86_64-pc-linux-gnu
-configure:5585: checking for GNU libc compatible malloc
-configure:5617: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-configure:5617: $? = 0
-configure:5617: ./conftest
-configure:5617: $? = 0
-configure:5628: result: yes
-configure:5650: checking for working strcoll
-configure:5678: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-configure:5678: $? = 0
-configure:5678: ./conftest
-configure:5678: $? = 0
-configure:5689: result: yes
-configure:5697: checking for atexit
-configure:5697: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-configure:5697: $? = 0
-configure:5697: result: yes
-configure:5703: checking for clock_gettime
-configure:5703: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-configure:5703: $? = 0
-configure:5703: result: yes
-configure:5709: checking for floor
-configure:5709: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-conftest.c:48:6: warning: conflicting types for built-in function 'floor'; expected 'double(double)' [-Wbuiltin-declaration-mismatch]
-   48 | char floor ();
+configure:6455: result: yes
+configure:6466: checking for error_at_line
+configure:6483: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+configure:6483: $? = 0
+configure:6492: result: yes
+configure:6503: checking for _LARGEFILE_SOURCE value needed for large files
+configure:6523: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+configure:6523: $? = 0
+configure:6553: result: no
+configure:6578: checking build system type
+configure:6593: result: x86_64-pc-linux-gnu
+configure:6613: checking host system type
+configure:6627: result: x86_64-pc-linux-gnu
+configure:6647: checking for GNU libc compatible malloc
+configure:6679: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+configure:6679: $? = 0
+configure:6679: ./conftest
+configure:6679: $? = 0
+configure:6690: result: yes
+configure:6712: checking for working strcoll
+configure:6740: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+configure:6740: $? = 0
+configure:6740: ./conftest
+configure:6740: $? = 0
+configure:6751: result: yes
+configure:6759: checking for atexit
+configure:6759: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+configure:6759: $? = 0
+configure:6759: result: yes
+configure:6765: checking for clock_gettime
+configure:6765: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+configure:6765: $? = 0
+configure:6765: result: yes
+configure:6771: checking for floor
+configure:6771: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+conftest.c:50:6: warning: conflicting types for built-in function 'floor'; expected 'double(double)' [-Wbuiltin-declaration-mismatch]
+   50 | char floor ();
       |      ^~~~~
-conftest.c:40:1: note: 'floor' is declared in header '<math.h>'
-   39 | #include <limits.h>
-   40 | #undef floor
-/nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: /tmp/cchTWlzJ.o: in function `main':
-/home/nodokaha/OpenPraparat/conftest.c:59: undefined reference to `floor'
+conftest.c:42:1: note: 'floor' is declared in header '<math.h>'
+   41 | #include <limits.h>
+   42 | #undef floor
+/nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: /tmp/ccdk8LtO.o: in function `main':
+/home/nodokaha/OpenPraparat/conftest.c:61: undefined reference to `floor'
 collect2: error: ld returned 1 exit status
-configure:5709: $? = 1
+configure:6771: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -1050,6 +1114,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | #define HAVE_LIBPTHREAD 1
 | #define HAVE_STDIO_H 1
 | #define HAVE_STDLIB_H 1
@@ -1105,53 +1171,53 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5709: result: no
-configure:5715: checking for localeconv
-configure:5715: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-configure:5715: $? = 0
-configure:5715: result: yes
-configure:5721: checking for memchr
-configure:5721: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-conftest.c:49:6: warning: conflicting types for built-in function 'memchr'; expected 'void *(const void *, int,  long unsigned int)' [-Wbuiltin-declaration-mismatch]
-   49 | char memchr ();
+configure:6771: result: no
+configure:6777: checking for localeconv
+configure:6777: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+configure:6777: $? = 0
+configure:6777: result: yes
+configure:6783: checking for memchr
+configure:6783: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+conftest.c:51:6: warning: conflicting types for built-in function 'memchr'; expected 'void *(const void *, int,  long unsigned int)' [-Wbuiltin-declaration-mismatch]
+   51 | char memchr ();
       |      ^~~~~~
-conftest.c:41:1: note: 'memchr' is declared in header '<string.h>'
-   40 | #include <limits.h>
-   41 | #undef memchr
-configure:5721: $? = 0
-configure:5721: result: yes
-configure:5727: checking for memmove
-configure:5727: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-conftest.c:50:6: warning: conflicting types for built-in function 'memmove'; expected 'void *(void *, const void *, long unsigned int)' [-Wbuiltin-declaration-mismatch]
-   50 | char memmove ();
-      |      ^~~~~~~
-conftest.c:42:1: note: 'memmove' is declared in header '<string.h>'
-   41 | #include <limits.h>
-   42 | #undef memmove
-configure:5727: $? = 0
-configure:5727: result: yes
-configure:5733: checking for memset
-configure:5733: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-conftest.c:51:6: warning: conflicting types for built-in function 'memset'; expected 'void *(void *, int,  long unsigned int)' [-Wbuiltin-declaration-mismatch]
-   51 | char memset ();
-      |      ^~~~~~
-conftest.c:43:1: note: 'memset' is declared in header '<string.h>'
+conftest.c:43:1: note: 'memchr' is declared in header '<string.h>'
    42 | #include <limits.h>
-   43 | #undef memset
-configure:5733: $? = 0
-configure:5733: result: yes
-configure:5739: checking for pow
-configure:5739: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-conftest.c:52:6: warning: conflicting types for built-in function 'pow'; expected 'double(double,  double)' [-Wbuiltin-declaration-mismatch]
-   52 | char pow ();
-      |      ^~~
-conftest.c:44:1: note: 'pow' is declared in header '<math.h>'
+   43 | #undef memchr
+configure:6783: $? = 0
+configure:6783: result: yes
+configure:6789: checking for memmove
+configure:6789: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+conftest.c:52:6: warning: conflicting types for built-in function 'memmove'; expected 'void *(void *, const void *, long unsigned int)' [-Wbuiltin-declaration-mismatch]
+   52 | char memmove ();
+      |      ^~~~~~~
+conftest.c:44:1: note: 'memmove' is declared in header '<string.h>'
    43 | #include <limits.h>
-   44 | #undef pow
-/nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: /tmp/ccZQ3nnn.o: in function `main':
-/home/nodokaha/OpenPraparat/conftest.c:63: undefined reference to `pow'
+   44 | #undef memmove
+configure:6789: $? = 0
+configure:6789: result: yes
+configure:6795: checking for memset
+configure:6795: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+conftest.c:53:6: warning: conflicting types for built-in function 'memset'; expected 'void *(void *, int,  long unsigned int)' [-Wbuiltin-declaration-mismatch]
+   53 | char memset ();
+      |      ^~~~~~
+conftest.c:45:1: note: 'memset' is declared in header '<string.h>'
+   44 | #include <limits.h>
+   45 | #undef memset
+configure:6795: $? = 0
+configure:6795: result: yes
+configure:6801: checking for pow
+configure:6801: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+conftest.c:54:6: warning: conflicting types for built-in function 'pow'; expected 'double(double,  double)' [-Wbuiltin-declaration-mismatch]
+   54 | char pow ();
+      |      ^~~
+conftest.c:46:1: note: 'pow' is declared in header '<math.h>'
+   45 | #include <limits.h>
+   46 | #undef pow
+/nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: /tmp/ccXbX1Rf.o: in function `main':
+/home/nodokaha/OpenPraparat/conftest.c:65: undefined reference to `pow'
 collect2: error: ld returned 1 exit status
-configure:5739: $? = 1
+configure:6801: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -1160,6 +1226,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | #define HAVE_LIBPTHREAD 1
 | #define HAVE_STDIO_H 1
 | #define HAVE_STDLIB_H 1
@@ -1219,27 +1287,27 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5739: result: no
-configure:5745: checking for realpath
-configure:5745: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-configure:5745: $? = 0
-configure:5745: result: yes
-configure:5751: checking for setlocale
-configure:5751: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-configure:5751: $? = 0
-configure:5751: result: yes
-configure:5757: checking for sqrt
-configure:5757: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-conftest.c:54:6: warning: conflicting types for built-in function 'sqrt'; expected 'double(double)' [-Wbuiltin-declaration-mismatch]
-   54 | char sqrt ();
+configure:6801: result: no
+configure:6807: checking for realpath
+configure:6807: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+configure:6807: $? = 0
+configure:6807: result: yes
+configure:6813: checking for setlocale
+configure:6813: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+configure:6813: $? = 0
+configure:6813: result: yes
+configure:6819: checking for sqrt
+configure:6819: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+conftest.c:56:6: warning: conflicting types for built-in function 'sqrt'; expected 'double(double)' [-Wbuiltin-declaration-mismatch]
+   56 | char sqrt ();
       |      ^~~~
-conftest.c:46:1: note: 'sqrt' is declared in header '<math.h>'
-   45 | #include <limits.h>
-   46 | #undef sqrt
-/nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: /tmp/ccKGUPeh.o: in function `main':
-/home/nodokaha/OpenPraparat/conftest.c:65: undefined reference to `sqrt'
+conftest.c:48:1: note: 'sqrt' is declared in header '<math.h>'
+   47 | #include <limits.h>
+   48 | #undef sqrt
+/nix/store/lz1bwpdvlywij5ir0fmncgqa83dlpwhn-binutils-2.39/bin/ld: /tmp/ccWX7vkr.o: in function `main':
+/home/nodokaha/OpenPraparat/conftest.c:67: undefined reference to `sqrt'
 collect2: error: ld returned 1 exit status
-configure:5757: $? = 1
+configure:6819: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OpenPraparat"
@@ -1248,6 +1316,8 @@ configure: failed program was:
 | #define PACKAGE_STRING "OpenPraparat 0.1"
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
+| #define PACKAGE "openpraparat"
+| #define VERSION "0.1"
 | #define HAVE_LIBPTHREAD 1
 | #define HAVE_STDIO_H 1
 | #define HAVE_STDLIB_H 1
@@ -1309,28 +1379,30 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5757: result: no
-configure:5763: checking for strchr
-configure:5763: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-conftest.c:54:6: warning: conflicting types for built-in function 'strchr'; expected 'char *(const char *, int)' [-Wbuiltin-declaration-mismatch]
-   54 | char strchr ();
+configure:6819: result: no
+configure:6825: checking for strchr
+configure:6825: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+conftest.c:56:6: warning: conflicting types for built-in function 'strchr'; expected 'char *(const char *, int)' [-Wbuiltin-declaration-mismatch]
+   56 | char strchr ();
       |      ^~~~~~
-conftest.c:46:1: note: 'strchr' is declared in header '<string.h>'
-   45 | #include <limits.h>
-   46 | #undef strchr
-configure:5763: $? = 0
-configure:5763: result: yes
-configure:5769: checking for strstr
-configure:5769: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-conftest.c:55:6: warning: conflicting types for built-in function 'strstr'; expected 'char *(const char *, const char *)' [-Wbuiltin-declaration-mismatch]
-   55 | char strstr ();
+conftest.c:48:1: note: 'strchr' is declared in header '<string.h>'
+   47 | #include <limits.h>
+   48 | #undef strchr
+configure:6825: $? = 0
+configure:6825: result: yes
+configure:6831: checking for strstr
+configure:6831: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
+conftest.c:57:6: warning: conflicting types for built-in function 'strstr'; expected 'char *(const char *, const char *)' [-Wbuiltin-declaration-mismatch]
+   57 | char strstr ();
       |      ^~~~~~
-conftest.c:47:1: note: 'strstr' is declared in header '<string.h>'
-   46 | #include <limits.h>
-   47 | #undef strstr
-configure:5769: $? = 0
-configure:5769: result: yes
-configure:5885: creating ./config.status
+conftest.c:49:1: note: 'strstr' is declared in header '<string.h>'
+   48 | #include <limits.h>
+   49 | #undef strstr
+configure:6831: $? = 0
+configure:6831: result: yes
+configure:6944: checking that generated files are newer than configure
+configure:6950: result: done
+configure:6977: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -1347,9 +1419,14 @@ generated by GNU Autoconf 2.71.  Invocation command line was
 
 on nodokaha-nixos
 
-config.status:823: creating src/Makefile
-config.status:823: creating config.h
-config.status:993: config.h is unchanged
+config.status:885: creating Makefile
+config.status:885: creating src/Makefile
+config.status:885: creating config.h
+config.status:1066: config.h is unchanged
+config.status:1114: executing depfiles commands
+config.status:1191: cd src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
+make: Nothing to be done for 'am--depfiles'.
+config.status:1196: $? = 0
 
 ## ---------------- ##
 ## Cache variables. ##
@@ -1431,6 +1508,9 @@ ac_cv_member_struct_stat_st_rdev=yes
 ac_cv_objext=o
 ac_cv_path_EGREP='/run/current-system/sw/bin/grep -E'
 ac_cv_path_GREP=/run/current-system/sw/bin/grep
+ac_cv_path_install='/run/current-system/sw/bin/install -c'
+ac_cv_path_mkdir=/run/current-system/sw/bin/mkdir
+ac_cv_prog_AWK=gawk
 ac_cv_prog_CPP='gcc -E'
 ac_cv_prog_ac_ct_CC=gcc
 ac_cv_prog_ac_ct_CXX=g++
@@ -1441,6 +1521,7 @@ ac_cv_prog_cxx_11=no
 ac_cv_prog_cxx_cxx11=
 ac_cv_prog_cxx_g=yes
 ac_cv_prog_cxx_stdcxx=
+ac_cv_prog_make_make_set=yes
 ac_cv_sys_largefile_source=no
 ac_cv_type__Bool=yes
 ac_cv_type_mode_t=yes
@@ -1448,29 +1529,60 @@ ac_cv_type_off_t=yes
 ac_cv_type_ptrdiff_t=yes
 ac_cv_type_size_t=yes
 ac_cv_type_uid_t=yes
+am_cv_CC_dependencies_compiler_type=gcc3
+am_cv_CXX_dependencies_compiler_type=gcc3
+am_cv_make_support_nested_variables=yes
+am_cv_prog_cc_c_o=yes
 
 ## ----------------- ##
 ## Output variables. ##
 ## ----------------- ##
 
+ACLOCAL='${SHELL} '\''/home/nodokaha/OpenPraparat/missing'\'' aclocal-1.16'
+AMDEPBACKSLASH='\'
+AMDEP_FALSE='#'
+AMDEP_TRUE=''
+AMTAR='$${TAR-tar}'
+AM_BACKSLASH='\'
+AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
+AM_DEFAULT_VERBOSITY='1'
+AM_V='$(V)'
+AUTOCONF='${SHELL} '\''/home/nodokaha/OpenPraparat/missing'\'' autoconf'
+AUTOHEADER='${SHELL} '\''/home/nodokaha/OpenPraparat/missing'\'' autoheader'
+AUTOMAKE='${SHELL} '\''/home/nodokaha/OpenPraparat/missing'\'' automake-1.16'
+AWK='gawk'
 CC='gcc'
+CCDEPMODE='depmode=gcc3'
 CFLAGS='-g -O2'
 CPP='gcc -E'
 CPPFLAGS=''
+CSCOPE='cscope'
+CTAGS='ctags'
 CXX='g++'
+CXXDEPMODE='depmode=gcc3'
 CXXFLAGS='-g -O2'
+CYGPATH_W='echo'
 DEFS='-DHAVE_CONFIG_H'
+DEPDIR='.deps'
 ECHO_C=''
 ECHO_N='-n'
 ECHO_T=''
 EGREP='/run/current-system/sw/bin/grep -E'
+ETAGS='etags'
 EXEEXT=''
 GREP='/run/current-system/sw/bin/grep'
+INSTALL_DATA='${INSTALL} -m 644'
+INSTALL_PROGRAM='${INSTALL}'
+INSTALL_SCRIPT='${INSTALL}'
+INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
 LDFLAGS=''
 LIBOBJS=''
 LIBS='-lpthread '
 LTLIBOBJS=''
+MAKEINFO='${SHELL} '\''/home/nodokaha/OpenPraparat/missing'\'' makeinfo'
+MKDIR_P='/run/current-system/sw/bin/mkdir -p'
 OBJEXT='o'
+PACKAGE='openpraparat'
 PACKAGE_BUGREPORT=''
 PACKAGE_NAME='OpenPraparat'
 PACKAGE_STRING='OpenPraparat 0.1'
@@ -1478,9 +1590,25 @@ PACKAGE_TARNAME='openpraparat'
 PACKAGE_URL=''
 PACKAGE_VERSION='0.1'
 PATH_SEPARATOR=':'
+SET_MAKE=''
 SHELL='/bin/sh'
+STRIP=''
+VERSION='0.1'
 ac_ct_CC='gcc'
 ac_ct_CXX='g++'
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__fastdepCXX_FALSE='#'
+am__fastdepCXX_TRUE=''
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
 bindir='${exec_prefix}/bin'
 build='x86_64-pc-linux-gnu'
 build_alias=''
@@ -1500,11 +1628,13 @@ host_vendor='pc'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
+install_sh='${SHELL} /home/nodokaha/OpenPraparat/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'
 localstatedir='${prefix}/var'
 mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
 oldincludedir='/usr/include'
 pdfdir='${docdir}'
 prefix='/usr/local'
@@ -1527,6 +1657,8 @@ target_alias=''
 #define PACKAGE_STRING "OpenPraparat 0.1"
 #define PACKAGE_BUGREPORT ""
 #define PACKAGE_URL ""
+#define PACKAGE "openpraparat"
+#define VERSION "0.1"
 #define HAVE_LIBPTHREAD 1
 #define HAVE_STDIO_H 1
 #define HAVE_STDLIB_H 1

@@ -10,6 +10,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_PROG_CXX
 AC_PROG_CC
 
+AM_INIT_AUTOMAKE
 # Checks for libraries.
 # FIXME: Replace 'main' with a function in '-lGL':
 AC_CHECK_LIB([GL], [main])
@@ -58,5 +59,5 @@ AC_FUNC_MALLOC
 AC_FUNC_STRCOLL
 AC_CHECK_FUNCS([atexit clock_gettime floor localeconv memchr memmove memset pow realpath setlocale sqrt strchr strstr])
 
-AC_CONFIG_FILES([src/Makefile])
-AC_OUTPUT
+AC_CONFIG_FILES()
+AC_OUTPUT([Makefile src/Makefile])
