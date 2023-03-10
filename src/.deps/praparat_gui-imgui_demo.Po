@@ -1,4 +1,4 @@
-imgui_demo.o: imgui/imgui_demo.cpp \
+praparat_gui-imgui_demo.o: imgui/imgui_demo.cpp \
  /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/stdc-predef.h \
  imgui/imgui.h imgui/imconfig.h \
  /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/float.h \

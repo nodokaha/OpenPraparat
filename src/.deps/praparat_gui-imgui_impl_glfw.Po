@@ -1,4 +1,4 @@
-imgui_impl_opengl2.o: imgui/backends/imgui_impl_opengl2.cpp \
+praparat_gui-imgui_impl_glfw.o: imgui/backends/imgui_impl_glfw.cpp \
  /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/stdc-predef.h \
  imgui/imgui.h imgui/imconfig.h \
  /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/float.h \
@@ -18,7 +18,8 @@ imgui_impl_opengl2.o: imgui/backends/imgui_impl_opengl2.cpp \
  /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/types/__locale_t.h \
  /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/strings.h \
  /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/assert.h \
- imgui/backends/imgui_impl_opengl2.h \
+ imgui/backends/imgui_impl_glfw.h \
+ /nix/store/dlk2lwb4jpkdl0mbfsfdir5a7czipcss-glfw-3.3.8/include/GLFW/glfw3.h \
  /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/stdint.h \
  /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/stdint.h \
  /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/types.h \
@@ -50,7 +51,8 @@ imgui/imconfig.h:
 /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/types/__locale_t.h:
 /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/strings.h:
 /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/assert.h:
-imgui/backends/imgui_impl_opengl2.h:
+imgui/backends/imgui_impl_glfw.h:
+/nix/store/dlk2lwb4jpkdl0mbfsfdir5a7czipcss-glfw-3.3.8/include/GLFW/glfw3.h:
 /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/stdint.h:
 /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/stdint.h:
 /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/types.h:

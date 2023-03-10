@@ -1,4 +1,4 @@
-imgui_tables.o: imgui/imgui_tables.cpp \
+praparat_gui-imgui_draw.o: imgui/imgui_draw.cpp \
  /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/stdc-predef.h \
  imgui/imgui.h imgui/imconfig.h \
  /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/float.h \
@@ -205,11 +205,7 @@ imgui_tables.o: imgui/imgui_tables.cpp \
  /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/amxbf16intrin.h \
  /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/prfchwintrin.h \
  /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/keylockerintrin.h \
- imgui/imstb_textedit.h \
- /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/stdint.h \
- /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/stdint.h \
- /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/wchar.h \
- /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/stdint-uintn.h
+ imgui/imstb_textedit.h imgui/imstb_rectpack.h imgui/imstb_truetype.h
 /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/stdc-predef.h:
 imgui/imgui.h:
 imgui/imconfig.h:
@@ -418,7 +414,5 @@ imgui/imgui_internal.h:
 /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/prfchwintrin.h:
 /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/keylockerintrin.h:
 imgui/imstb_textedit.h:
-/nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/stdint.h:
-/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/stdint.h:
-/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/wchar.h:
-/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/stdint-uintn.h:
+imgui/imstb_rectpack.h:
+imgui/imstb_truetype.h:

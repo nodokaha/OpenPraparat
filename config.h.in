@@ -42,6 +42,9 @@
 /* Define to 1 if you have the `pthread' library (-lpthread). */
 #undef HAVE_LIBPTHREAD
 
+/* Define to 1 if you have the `quadmath' library (-lquadmath). */
+#undef HAVE_LIBQUADMATH
+
 /* Define to 1 if you have the `localeconv' function. */
 #undef HAVE_LOCALECONV
 

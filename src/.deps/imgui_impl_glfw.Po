@@ -1,1 +1,66 @@
-# dummy
+imgui_impl_glfw.o: imgui/backends/imgui_impl_glfw.cpp \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/stdc-predef.h \
+ imgui/imgui.h imgui/imconfig.h \
+ /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/float.h \
+ /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/stdarg.h \
+ /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/stddef.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/string.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/libc-header-start.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/features.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/features-time64.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/wordsize.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/timesize.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/sys/cdefs.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/long-double.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/gnu/stubs.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/gnu/stubs-64.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/types/locale_t.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/types/__locale_t.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/strings.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/assert.h \
+ imgui/backends/imgui_impl_glfw.h \
+ /nix/store/dlk2lwb4jpkdl0mbfsfdir5a7czipcss-glfw-3.3.8/include/GLFW/glfw3.h \
+ /nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/stdint.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/stdint.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/types.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/typesizes.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/time64.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/wchar.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/stdint-intn.h \
+ /nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/stdint-uintn.h \
+ /nix/store/zmxdh5facsyh9lp6mr6klsq6qw1smpml-libGL-1.5.0-dev/include/GL/gl.h \
+ /nix/store/zmxdh5facsyh9lp6mr6klsq6qw1smpml-libGL-1.5.0-dev/include/GL/glext.h \
+ /nix/store/zmxdh5facsyh9lp6mr6klsq6qw1smpml-libGL-1.5.0-dev/include/KHR/khrplatform.h
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/stdc-predef.h:
+imgui/imgui.h:
+imgui/imconfig.h:
+/nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/float.h:
+/nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/stdarg.h:
+/nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/stddef.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/string.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/libc-header-start.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/features.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/features-time64.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/wordsize.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/timesize.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/sys/cdefs.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/long-double.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/gnu/stubs.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/gnu/stubs-64.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/types/locale_t.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/types/__locale_t.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/strings.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/assert.h:
+imgui/backends/imgui_impl_glfw.h:
+/nix/store/dlk2lwb4jpkdl0mbfsfdir5a7czipcss-glfw-3.3.8/include/GLFW/glfw3.h:
+/nix/store/qm03mh5x2j4ls0y80y8h3zsyj4hb52w2-gcc-11.3.0/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include/stdint.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/stdint.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/types.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/typesizes.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/time64.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/wchar.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/stdint-intn.h:
+/nix/store/l1a7p8yp0nlvghq5vifz4qr6s11frxl5-glibc-2.35-224-dev/include/bits/stdint-uintn.h:
+/nix/store/zmxdh5facsyh9lp6mr6klsq6qw1smpml-libGL-1.5.0-dev/include/GL/gl.h:
+/nix/store/zmxdh5facsyh9lp6mr6klsq6qw1smpml-libGL-1.5.0-dev/include/GL/glext.h:
+/nix/store/zmxdh5facsyh9lp6mr6klsq6qw1smpml-libGL-1.5.0-dev/include/KHR/khrplatform.h:

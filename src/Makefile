@@ -109,14 +109,20 @@ am_praparat_builder_OBJECTS = builder.$(OBJEXT) imgui.$(OBJEXT) \
 	ImGuiFileDialog.$(OBJEXT)
 praparat_builder_OBJECTS = $(am_praparat_builder_OBJECTS)
 praparat_builder_LDADD = $(LDADD)
-praparat_cui_SOURCES = praparat_cui.c
-praparat_cui_OBJECTS = praparat_cui.$(OBJEXT)
+am_praparat_cui_OBJECTS = math.$(OBJEXT) praparat.$(OBJEXT) \
+	main.$(OBJEXT)
+praparat_cui_OBJECTS = $(am_praparat_cui_OBJECTS)
 praparat_cui_LDADD = $(LDADD)
-praparat_deb_SOURCES = praparat_deb.c
-praparat_deb_OBJECTS = praparat_deb.$(OBJEXT)
+am_praparat_deb_OBJECTS = math.$(OBJEXT) praparat.$(OBJEXT) \
+	main.$(OBJEXT)
+praparat_deb_OBJECTS = $(am_praparat_deb_OBJECTS)
 praparat_deb_LDADD = $(LDADD)
-praparat_gui_SOURCES = praparat_gui.c
-praparat_gui_OBJECTS = praparat_gui.$(OBJEXT)
+am_praparat_gui_OBJECTS = gui.$(OBJEXT) math.$(OBJEXT) \
+	praparat.$(OBJEXT) imgui.$(OBJEXT) imgui_demo.$(OBJEXT) \
+	imgui_draw.$(OBJEXT) imgui_tables.$(OBJEXT) \
+	imgui_widgets.$(OBJEXT) imgui_impl_glfw.$(OBJEXT) \
+	imgui_impl_opengl2.$(OBJEXT) ImGuiFileDialog.$(OBJEXT)
+praparat_gui_OBJECTS = $(am_praparat_gui_OBJECTS)
 praparat_gui_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
@@ -134,25 +140,12 @@ DEFAULT_INCLUDES = -I. -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__maybe_remake_depfiles = depfiles
 am__depfiles_remade = ./$(DEPDIR)/ImGuiFileDialog.Po \
-	./$(DEPDIR)/builder.Po ./$(DEPDIR)/imgui.Po \
+	./$(DEPDIR)/builder.Po ./$(DEPDIR)/gui.Po ./$(DEPDIR)/imgui.Po \
 	./$(DEPDIR)/imgui_demo.Po ./$(DEPDIR)/imgui_draw.Po \
 	./$(DEPDIR)/imgui_impl_glfw.Po \
 	./$(DEPDIR)/imgui_impl_opengl2.Po ./$(DEPDIR)/imgui_tables.Po \
-	./$(DEPDIR)/imgui_widgets.Po ./$(DEPDIR)/praparat_cui.Po \
-	./$(DEPDIR)/praparat_deb.Po ./$(DEPDIR)/praparat_gui.Po
+	./$(DEPDIR)/imgui_widgets.Po
 am__mv = mv -f
-COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-AM_V_CC = $(am__v_CC_$(V))
-am__v_CC_ = $(am__v_CC_$(AM_DEFAULT_VERBOSITY))
-am__v_CC_0 = @echo "  CC      " $@;
-am__v_CC_1 = 
-CCLD = $(CC)
-LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-AM_V_CCLD = $(am__v_CCLD_$(V))
-am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
-am__v_CCLD_0 = @echo "  CCLD    " $@;
-am__v_CCLD_1 = 
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
@@ -170,10 +163,34 @@ AM_V_CXXLD = $(am__v_CXXLD_$(V))
 am__v_CXXLD_ = $(am__v_CXXLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(praparat_builder_SOURCES) praparat_cui.c praparat_deb.c \
-	praparat_gui.c
-DIST_SOURCES = $(praparat_builder_SOURCES) praparat_cui.c \
-	praparat_deb.c praparat_gui.c
+FCCOMPILE = $(FC) $(AM_FCFLAGS) $(FCFLAGS)
+AM_V_FC = $(am__v_FC_$(V))
+am__v_FC_ = $(am__v_FC_$(AM_DEFAULT_VERBOSITY))
+am__v_FC_0 = @echo "  FC      " $@;
+am__v_FC_1 = 
+FCLD = $(FC)
+FCLINK = $(FCLD) $(AM_FCFLAGS) $(FCFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o \
+	$@
+AM_V_FCLD = $(am__v_FCLD_$(V))
+am__v_FCLD_ = $(am__v_FCLD_$(AM_DEFAULT_VERBOSITY))
+am__v_FCLD_0 = @echo "  FCLD    " $@;
+am__v_FCLD_1 = 
+COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+AM_V_CC = $(am__v_CC_$(V))
+am__v_CC_ = $(am__v_CC_$(AM_DEFAULT_VERBOSITY))
+am__v_CC_0 = @echo "  CC      " $@;
+am__v_CC_1 = 
+CCLD = $(CC)
+LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+AM_V_CCLD = $(am__v_CCLD_$(V))
+am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
+am__v_CCLD_0 = @echo "  CCLD    " $@;
+am__v_CCLD_1 = 
+SOURCES = $(praparat_builder_SOURCES) $(praparat_cui_SOURCES) \
+	$(praparat_deb_SOURCES) $(praparat_gui_SOURCES)
+DIST_SOURCES = $(praparat_builder_SOURCES) $(praparat_cui_SOURCES) \
+	$(praparat_deb_SOURCES) $(praparat_gui_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -214,28 +231,30 @@ CSCOPE = cscope
 CTAGS = ctags
 CXX = g++
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -g -O2
+CXXFLAGS = -std=c++17 -I$(IMGUI_DIR) -I$(IMGUI_DIR)/backends -Wall -Wformat -Wall -fbounds-check -O0 -Wuninitialized -g
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
-EGREP = /run/current-system/sw/bin/grep -E
+EGREP = /nix/store/6cw0r7hvdrijq1izljsl9bqbl6568chp-gnugrep-3.7/bin/grep -E
 ETAGS = etags
 EXEEXT = 
-GREP = /run/current-system/sw/bin/grep
-INSTALL = /run/current-system/sw/bin/install -c
+FC = gfortran
+FCFLAGS = -g -O2
+GREP = /nix/store/6cw0r7hvdrijq1izljsl9bqbl6568chp-gnugrep-3.7/bin/grep
+INSTALL = /nix/store/wxb674h6dp7h63na8z6jwpagps811jl7-coreutils-9.1/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LDFLAGS = 
 LIBOBJS = 
-LIBS = -lpthread 
+LIBS = -lpthread -lglfw -lgfortran -lGLU -lGL -lquadmath 
 LTLIBOBJS = 
 MAKEINFO = ${SHELL} '/home/nodokaha/OpenPraparat/missing' makeinfo
-MKDIR_P = /run/current-system/sw/bin/mkdir -p
+MKDIR_P = /nix/store/wxb674h6dp7h63na8z6jwpagps811jl7-coreutils-9.1/bin/mkdir -p
 OBJEXT = o
 PACKAGE = openpraparat
 PACKAGE_BUGREPORT = 
@@ -246,15 +265,16 @@ PACKAGE_URL =
 PACKAGE_VERSION = 0.1
 PATH_SEPARATOR = :
 SET_MAKE = 
-SHELL = /bin/sh
-STRIP = 
+SHELL = /nix/store/96ky1zdkpq871h2dlk198fz0zvklr1dr-bash-5.1-p16/bin/bash
+STRIP = strip
 VERSION = 0.1
 abs_builddir = /home/nodokaha/OpenPraparat/src
 abs_srcdir = /home/nodokaha/OpenPraparat/src
 abs_top_builddir = /home/nodokaha/OpenPraparat
 abs_top_srcdir = /home/nodokaha/OpenPraparat
 ac_ct_CC = gcc
-ac_ct_CXX = g++
+ac_ct_CXX = 
+ac_ct_FC = gfortran
 am__include = include
 am__leading_dot = .
 am__quote = 
@@ -302,11 +322,17 @@ top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
 IMGUI_DIR = ./imgui
-praparat_builder_SOURCES = builder.cpp $(IMGUI_DIR)/imgui.cpp $(IMGUI_DIR)/imgui_demo.cpp $(IMGUI_DIR)/imgui_draw.cpp $(IMGUI_DIR)/imgui_tables.cpp $(IMGUI_DIR)/imgui_widgets.cpp $(IMGUI_DIR)/backends/imgui_impl_glfw.cpp $(IMGUI_DIR)/backends/imgui_impl_opengl2.cpp lib/ImGuiFileDialog/ImGuiFileDialog.cpp
+praparat_builder_SOURCES = builder.cpp $(IMGUI_DIR)/imgui.cpp $(IMGUI_DIR)/imgui_demo.cpp $(IMGUI_DIR)/imgui_draw.cpp $(IMGUI_DIR)/imgui_tables.cpp $(IMGUI_DIR)/imgui_widgets.cpp $(IMGUI_DIR)/backends/imgui_impl_glfw.cpp $(IMGUI_DIR)/backends/imgui_impl_opengl2.cpp lib/ImGuiFileDialog/ImGuiFileDialog.cpp  $(IMGUI_DIR)imconfig.h  $(IMGUI_DIR)imgui_internal.h  $(IMGUI_DIR)imstb_textedit.h $(IMGUI_DIR)imgui.h $(IMGUI_DIR)imstb_rectpack.h  $(IMGUI_DIR)imstb_truetype.h
+praparat_gui_SOURCES = gui.cpp math.f90 praparat.f90 $(IMGUI_DIR)/imgui.cpp $(IMGUI_DIR)/imgui_demo.cpp $(IMGUI_DIR)/imgui_draw.cpp $(IMGUI_DIR)/imgui_tables.cpp $(IMGUI_DIR)/imgui_widgets.cpp $(IMGUI_DIR)/backends/imgui_impl_glfw.cpp $(IMGUI_DIR)/backends/imgui_impl_opengl2.cpp $(IMGUI_DIR)imconfig.h  $(IMGUI_DIR)imgui_internal.h  $(IMGUI_DIR)imstb_textedit.h $(IMGUI_DIR)imgui.h $(IMGUI_DIR)imstb_rectpack.h  $(IMGUI_DIR)imstb_truetype.h lib/ImGuiFileDialog/ImGuiFileDialog.cpp lib/ImGuiFileDialog/ImGuiFileDialog.h lib/ImGuiFileDialog/ImGuiFileDialogConfig.h
+praparat_gui_FFLAGS = -Wall -fbounds-check -O0 -Wuninitialized -fbacktrace -g
+praparat_deb_SOURCES = math.f90 praparat.f90 main.f90
+praparat_deb_FFLAGS = -Wall -fbounds-check -O0 -Wuninitialized -fbacktrace -g
+praparat_cui_SOURCES = math.f90 praparat.f90 main.f90
+praparat_SOURCES_FFLAGS = -O3
 all: all-am
 
 .SUFFIXES:
-.SUFFIXES: .c .cpp .o .obj
+.SUFFIXES: .cpp .f90 .o .obj
 $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
@@ -385,15 +411,15 @@ praparat_builder$(EXEEXT): $(praparat_builder_OBJECTS) $(praparat_builder_DEPEND
 
 praparat_cui$(EXEEXT): $(praparat_cui_OBJECTS) $(praparat_cui_DEPENDENCIES) $(EXTRA_praparat_cui_DEPENDENCIES) 
 	@rm -f praparat_cui$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(praparat_cui_OBJECTS) $(praparat_cui_LDADD) $(LIBS)
+	$(AM_V_FCLD)$(FCLINK) $(praparat_cui_OBJECTS) $(praparat_cui_LDADD) $(LIBS)
 
 praparat_deb$(EXEEXT): $(praparat_deb_OBJECTS) $(praparat_deb_DEPENDENCIES) $(EXTRA_praparat_deb_DEPENDENCIES) 
 	@rm -f praparat_deb$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(praparat_deb_OBJECTS) $(praparat_deb_LDADD) $(LIBS)
+	$(AM_V_FCLD)$(FCLINK) $(praparat_deb_OBJECTS) $(praparat_deb_LDADD) $(LIBS)
 
 praparat_gui$(EXEEXT): $(praparat_gui_OBJECTS) $(praparat_gui_DEPENDENCIES) $(EXTRA_praparat_gui_DEPENDENCIES) 
 	@rm -f praparat_gui$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(praparat_gui_OBJECTS) $(praparat_gui_LDADD) $(LIBS)
+	$(AM_V_CXXLD)$(CXXLINK) $(praparat_gui_OBJECTS) $(praparat_gui_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -403,6 +429,7 @@ distclean-compile:
 
 include ./$(DEPDIR)/ImGuiFileDialog.Po # am--include-marker
 include ./$(DEPDIR)/builder.Po # am--include-marker
+include ./$(DEPDIR)/gui.Po # am--include-marker
 include ./$(DEPDIR)/imgui.Po # am--include-marker
 include ./$(DEPDIR)/imgui_demo.Po # am--include-marker
 include ./$(DEPDIR)/imgui_draw.Po # am--include-marker
@@ -410,29 +437,12 @@ include ./$(DEPDIR)/imgui_impl_glfw.Po # am--include-marker
 include ./$(DEPDIR)/imgui_impl_opengl2.Po # am--include-marker
 include ./$(DEPDIR)/imgui_tables.Po # am--include-marker
 include ./$(DEPDIR)/imgui_widgets.Po # am--include-marker
-include ./$(DEPDIR)/praparat_cui.Po # am--include-marker
-include ./$(DEPDIR)/praparat_deb.Po # am--include-marker
-include ./$(DEPDIR)/praparat_gui.Po # am--include-marker
 
 $(am__depfiles_remade):
 	@$(MKDIR_P) $(@D)
 	@echo '# dummy' >$@-t && $(am__mv) $@-t $@
 
 am--depfiles: $(am__depfiles_remade)
-
-.c.o:
-	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
-
-.c.obj:
-	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .cpp.o:
 	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -559,6 +569,12 @@ ImGuiFileDialog.obj: lib/ImGuiFileDialog/ImGuiFileDialog.cpp
 #	$(AM_V_CXX)source='lib/ImGuiFileDialog/ImGuiFileDialog.cpp' object='ImGuiFileDialog.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o ImGuiFileDialog.obj `if test -f 'lib/ImGuiFileDialog/ImGuiFileDialog.cpp'; then $(CYGPATH_W) 'lib/ImGuiFileDialog/ImGuiFileDialog.cpp'; else $(CYGPATH_W) '$(srcdir)/lib/ImGuiFileDialog/ImGuiFileDialog.cpp'; fi`
+
+.f90.o:
+	$(AM_V_FC)$(FCCOMPILE) -c -o $@ $<
+
+.f90.obj:
+	$(AM_V_FC)$(FCCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
@@ -688,6 +704,7 @@ clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
 distclean: distclean-am
 		-rm -f ./$(DEPDIR)/ImGuiFileDialog.Po
 	-rm -f ./$(DEPDIR)/builder.Po
+	-rm -f ./$(DEPDIR)/gui.Po
 	-rm -f ./$(DEPDIR)/imgui.Po
 	-rm -f ./$(DEPDIR)/imgui_demo.Po
 	-rm -f ./$(DEPDIR)/imgui_draw.Po
@@ -695,9 +712,6 @@ distclean: distclean-am
 	-rm -f ./$(DEPDIR)/imgui_impl_opengl2.Po
 	-rm -f ./$(DEPDIR)/imgui_tables.Po
 	-rm -f ./$(DEPDIR)/imgui_widgets.Po
-	-rm -f ./$(DEPDIR)/praparat_cui.Po
-	-rm -f ./$(DEPDIR)/praparat_deb.Po
-	-rm -f ./$(DEPDIR)/praparat_gui.Po
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -745,6 +759,7 @@ installcheck-am:
 maintainer-clean: maintainer-clean-am
 		-rm -f ./$(DEPDIR)/ImGuiFileDialog.Po
 	-rm -f ./$(DEPDIR)/builder.Po
+	-rm -f ./$(DEPDIR)/gui.Po
 	-rm -f ./$(DEPDIR)/imgui.Po
 	-rm -f ./$(DEPDIR)/imgui_demo.Po
 	-rm -f ./$(DEPDIR)/imgui_draw.Po
@@ -752,9 +767,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f ./$(DEPDIR)/imgui_impl_opengl2.Po
 	-rm -f ./$(DEPDIR)/imgui_tables.Po
 	-rm -f ./$(DEPDIR)/imgui_widgets.Po
-	-rm -f ./$(DEPDIR)/praparat_cui.Po
-	-rm -f ./$(DEPDIR)/praparat_deb.Po
-	-rm -f ./$(DEPDIR)/praparat_gui.Po
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 
@@ -790,9 +802,6 @@ uninstall-am: uninstall-binPROGRAMS
 
 .PRECIOUS: Makefile
 
-# praparat_gui_SOURCES=
-# praparat_deb_SOURCES=
-# praparat_cui_SOURCES=
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

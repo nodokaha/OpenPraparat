@@ -20,19 +20,19 @@
 /* #undef HAVE_LIBGDI32 */
 
 /* Define to 1 if you have the `gfortran' library (-lgfortran). */
-/* #undef HAVE_LIBGFORTRAN */
+#define HAVE_LIBGFORTRAN 1
 
 /* Define to 1 if you have the `GL' library (-lGL). */
-/* #undef HAVE_LIBGL */
+#define HAVE_LIBGL 1
 
 /* Define to 1 if you have the `glfw' library (-lglfw). */
-/* #undef HAVE_LIBGLFW */
+#define HAVE_LIBGLFW 1
 
 /* Define to 1 if you have the `glfw3' library (-lglfw3). */
 /* #undef HAVE_LIBGLFW3 */
 
 /* Define to 1 if you have the `GLU' library (-lGLU). */
-/* #undef HAVE_LIBGLU */
+#define HAVE_LIBGLU 1
 
 /* Define to 1 if you have the `imm32' library (-limm32). */
 /* #undef HAVE_LIBIMM32 */
@@ -42,6 +42,9 @@
 
 /* Define to 1 if you have the `pthread' library (-lpthread). */
 #define HAVE_LIBPTHREAD 1
+
+/* Define to 1 if you have the `quadmath' library (-lquadmath). */
+#define HAVE_LIBQUADMATH 1
 
 /* Define to 1 if you have the `localeconv' function. */
 #define HAVE_LOCALECONV 1

@@ -2,16 +2,19 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.71])
-AC_INIT([OpenPraparat], [0.1], [])
+AC_INIT([OpenPraparat],[0.1],[])
 AC_CONFIG_SRCDIR([src/gui.cpp])
 AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
 AC_PROG_CXX
 AC_PROG_CC
+AC_PROG_FC
 
 AM_INIT_AUTOMAKE
 # Checks for libraries.
+# FIXME: Replace 'main' with a function in '-lquadmath':
+AC_CHECK_LIB([quadmath], [main])
 # FIXME: Replace 'main' with a function in '-lGL':
 AC_CHECK_LIB([GL], [main])
 # FIXME: Replace 'main' with a function in '-lGLU':
@@ -60,4 +63,5 @@ AC_FUNC_STRCOLL
 AC_CHECK_FUNCS([atexit clock_gettime floor localeconv memchr memmove memset pow realpath setlocale sqrt strchr strstr])
 
 AC_CONFIG_FILES()
-AC_OUTPUT([Makefile src/Makefile])
+AC_CONFIG_FILES([Makefile src/Makefile])
+AC_OUTPUT
