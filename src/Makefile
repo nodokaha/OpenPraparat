@@ -64,6 +64,7 @@ ifeq ($(UNAME_S), Darwin) #APPLE
 	BREW_GCC_PATH := $(shell brew --prefix gcc)
 	BREW_GCC := $(shell ls -1 $(BREW_GCC_PATH)/bin/ | grep ^g++ | sed 's/*//')
 	CXX = $(BREW_GCC)
+	FC = gfortran-11
 
 	LIBS += -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
 	LIBS += -L/usr/local/lib -L/opt/homebrew/lib
