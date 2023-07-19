@@ -26,6 +26,8 @@ jobs:
     - name: Setup Windows
       if: ${{ matrix.os == 'windows-latest' }}
       uses: msys2/setup-msys2@v2
+      with:
+        msystem: MINGW64
       
     - name: Setup MSYS2
       if: ${{ matrix.os == 'windows-latest' }}
@@ -53,11 +55,12 @@ jobs:
         brew install glfw3
         
     - name: package make
+      if: ${{ matrix.os != 'windows-latest' }}
       run: |
         cd src
         make all install
       
-    - name: link windows binary
+    - name: package make on windows binary
       if: ${{ matrix.os == 'windows-latest' }}
       shell: msys2 {0}
       run: |
