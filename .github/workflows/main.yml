@@ -43,7 +43,11 @@ jobs:
         pacman -S mingw-w64-x86_64-gcc-libgfortran
         
     - name: Setup Mac
-      if: ${{ matrix.os == 'macos-latest' }}    
+      if: ${{ matrix.os == 'macos-latest' }}
+      uses: melusina-org/gha-install-macports@v1
+      
+    - name: Setup Environment Mac
+      if: ${{ matrix.os == 'macos-latest' }}
       run: |
         sudo port install gcc10
         brew install glfw3
