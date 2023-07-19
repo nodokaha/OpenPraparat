@@ -31,16 +31,16 @@ jobs:
       if: ${{ matrix.os == 'windows-latest' }}
       shell: msys2 {0}
       run: |
-        pacman -Sy
-        pacman -Su
+        echo y|pacman -Sy
+        echo y|pacman -Su
 
-        pacman -S mingw-w64-x86_64-gcc
-        pacman -S make
-        pacman -S git
-        pacman -S mingw-w64-x86_64-pkg-config
-        pacman -S mingw-w64-x86_64-glfw
-        pacman -S mingw-w64-x86_64-gcc-fortran
-        pacman -S mingw-w64-x86_64-gcc-libgfortran
+        echo y|pacman -S mingw-w64-x86_64-gcc
+        echo y|pacman -S make
+        echo y|pacman -S git
+        echo y|pacman -S mingw-w64-x86_64-pkg-config
+        echo y|pacman -S mingw-w64-x86_64-glfw
+        echo y|pacman -S mingw-w64-x86_64-gcc-fortran
+        echo y|pacman -S mingw-w64-x86_64-gcc-libgfortran
         
     - name: Setup Mac
       if: ${{ matrix.os == 'macos-latest' }}
