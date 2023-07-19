@@ -38,7 +38,7 @@ jobs:
 
         echo y|pacman -S mingw-w64-x86_64-gcc
         echo y|pacman -S make
-        echo y|pacman -S git
+        echo y|pacman -S zip
         echo y|pacman -S mingw-w64-x86_64-pkg-config
         echo y|pacman -S mingw-w64-x86_64-glfw
         echo y|pacman -S mingw-w64-x86_64-gcc-fortran
@@ -54,7 +54,7 @@ jobs:
       if: ${{ matrix.os == 'macos-latest' }}
       run: |
         sudo port install gcc10
-        brew install glfw3
+        brew install glfw3 zip
         
     - name: package make
       if: ${{ matrix.os != 'windows-latest' }}
