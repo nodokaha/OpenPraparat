@@ -43,6 +43,8 @@ jobs:
         echo y|pacman -S mingw-w64-x86_64-glfw
         echo y|pacman -S mingw-w64-x86_64-gcc-fortran
         echo y|pacman -S mingw-w64-x86_64-gcc-libgfortran
+        cd src
+        make all install
         
     - name: Setup Mac
       if: ${{ matrix.os == 'macos-latest' }}
