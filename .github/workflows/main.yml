@@ -9,16 +9,57 @@ jobs:
   build:
     strategy:
       matrix:
-        machine: [ubuntu-latest, macos-latest, windows-latest]
+        config:
+          - os: ubuntu-latest
+          - os: macos-latest
+          - os: windows-latest
         
-    runs-on: ${{ matrix.machine }}
+    runs-on: ${{ matrix.config.os }}
 
     steps:
     - uses: actions/checkout@v3
 
-    - name: Install dependencies
-      run: make install
+    - name: Setup Ubuntu
+      if: ${{ matrix.machine == "ubuntu-latest" }}
+      run: |
+        sudo apt install build-essential gfortran
+        sudo apt install libglu1-mesa-dev mesa-common-dev
+        sudo apt install libglfw3 libglfw3-dev
+        
+    - name: Setup Windows
+      if: ${{ matrix.machine == "windows-latest" }}
+      uses: msys2/setup-msys2@v2
       
+    - name: Setup MSYS2
+      if: ${{ matrix.machine == "windows-latest" }}
+      shell: msys2 {0}
+      run: |
+        pacman -Sy
+        pacman -Su
+
+        pacman -S mingw-w64-x86_64-gcc
+        pacman -S make
+        pacman -S git
+        pacman -S mingw-w64-x86_64-pkg-config
+        pacman -S mingw-w64-x86_64-glfw
+        pacman -S mingw-w64-x86_64-gcc-fortran
+        pacman -S mingw-w64-x86_64-gcc-libgfortran
+        
+    - name: Setup Mac
+      if: ${{ matrix.machine == "macos-latest" }}    
+      run: |
+        brew install gcc
+        brew install glfw3
+        
+    - name: package make
+      run: make all install
+      
+    - name: link windows binary
+      if: ${{ matrix.machine == "windows-latest" }}
+      shell: msys2 {0}
+      run: |
+        cd src
+        ./link4win.sh
     - name: zip
       run: zip -r OpenPraparat.zip build
 
@@ -40,5 +81,5 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }} 
         asset_path: OpenPraparat.zip
-        asset_name: OpenPraparat
+        asset_name: OpenPraparat-${{ matrix.config.os }}
         asset_content_type: application/zip
