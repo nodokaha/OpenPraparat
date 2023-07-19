@@ -20,18 +20,18 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Setup Ubuntu
-      if: ${{ matrix.machine == "ubuntu-latest" }}
+      if: ${{ matrix.config.os == "ubuntu-latest" }}
       run: |
         sudo apt install build-essential gfortran
         sudo apt install libglu1-mesa-dev mesa-common-dev
         sudo apt install libglfw3 libglfw3-dev
         
     - name: Setup Windows
-      if: ${{ matrix.machine == "windows-latest" }}
+      if: ${{ matrix.config.os == "windows-latest" }}
       uses: msys2/setup-msys2@v2
       
     - name: Setup MSYS2
-      if: ${{ matrix.machine == "windows-latest" }}
+      if: ${{ matrix.config.os == "windows-latest" }}
       shell: msys2 {0}
       run: |
         pacman -Sy
@@ -46,7 +46,7 @@ jobs:
         pacman -S mingw-w64-x86_64-gcc-libgfortran
         
     - name: Setup Mac
-      if: ${{ matrix.machine == "macos-latest" }}    
+      if: ${{ matrix.config.os == "macos-latest" }}    
       run: |
         brew install gcc
         brew install glfw3
@@ -55,7 +55,7 @@ jobs:
       run: make all install
       
     - name: link windows binary
-      if: ${{ matrix.machine == "windows-latest" }}
+      if: ${{ matrix.config.os == "windows-latest" }}
       shell: msys2 {0}
       run: |
         cd src
