@@ -74,7 +74,7 @@ jobs:
       if: ${{ matrix.os == 'macos-latest' }}
       run: |
         sudo port install gcc10
-        brew install glfw3 zip
+        brew install glfw3 zip gfortran
         
     - name: package make
       if: ${{ matrix.os != 'windows-latest' }}
