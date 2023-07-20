@@ -77,8 +77,9 @@ jobs:
         mkdir build
         ./gnustyle_setup.sh
         ./configure
+        cd src
         make
-        make install DESTDIR=./build
+        make install DESTDIR=../build
       
     - name: package make on windows binary
       if: ${{ matrix.os == 'windows-latest' }}
