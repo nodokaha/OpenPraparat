@@ -75,7 +75,7 @@ jobs:
       run: |
         mkdir build
         ./gnustyle_setup.sh
-        ./configure --prefix=/ --disable-shared --enable-static LDFLAGS=-static
+        ./configure --prefix=/ --disable-shared --enable-static LDFLAGS="-static-libgcc -static-libstdc++"
         cd src
         make
         make install DESTDIR=$(pwd)/../build
