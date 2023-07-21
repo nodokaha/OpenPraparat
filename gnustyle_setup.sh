@@ -54,6 +54,4 @@ autoheader
 autoconf
 automake --add-missing --copy --force-missing
 autoreconf -fiv
-./configure
-autoreconf -fiv
 echo "please! ./configure && make!"
